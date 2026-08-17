@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kidzee Play School | Lucknow</title>
+  <meta name="description" content="Kidzee Play School in Lucknow — a joyful, safe and nurturing learning environment for young children.">
+  <style>
+    :root{
+      --purple:#6c3fc5; --pink:#f05b9d; --yellow:#ffd447; --blue:#45b7e8;
+      --green:#5bc98a; --dark:#263238; --light:#fff9fd; --white:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--light);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:var(--purple);color:#fff;text-align:center;padding:8px;font-size:14px}
+    header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 15px #0001}
+    nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--purple);font-size:23px}
+    .logo-mark{width:46px;height:46px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-size:25px}
+    .links{display:flex;gap:25px;align-items:center}
+    .links a{font-weight:700;font-size:14px}
+    .links a:hover{color:var(--pink)}
+    .btn{display:inline-block;padding:12px 20px;border-radius:28px;background:var(--pink);color:#fff;font-weight:800;border:0;cursor:pointer}
+    .btn:hover{transform:translateY(-2px)}
+    .hero{background:linear-gradient(135deg,#fff2f8 0%,#eef8ff 100%);overflow:hidden}
+    .hero-inner{max-width:1180px;margin:auto;min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:70px 20px}
+    .eyebrow{display:inline-block;background:#fff;border:2px solid #ffd8e9;color:var(--pink);padding:7px 13px;border-radius:20px;font-weight:800;margin-bottom:18px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.03;color:var(--purple);margin-bottom:20px}
+    .hero p{font-size:19px;max-width:620px;margin-bottom:28px;color:#526067}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn.secondary{background:#fff;color:var(--purple);border:2px solid #ded2f8}
+    .hero-art{position:relative;min-height:450px;display:grid;place-items:center}
+    .sun{position:absolute;width:330px;height:330px;border-radius:50%;background:#ffe89b;right:20px;top:25px}
+    .bubble{position:absolute;border-radius:50%;background:#fff;box-shadow:0 12px 30px #0001}
+    .bubble.one{width:80px;height:80px;left:5px;top:90px}.bubble.two{width:55px;height:55px;right:0;bottom:80px}
+    .kid-card{position:relative;z-index:2;background:#fff;border-radius:35px;padding:30px;width:min(370px,90%);text-align:center;box-shadow:0 25px 60px #59318d25}
+    .kid-face{font-size:125px;line-height:1;margin-bottom:12px}
+    .kid-card h3{color:var(--purple);font-size:25px}.kid-card p{font-size:14px;color:#6d777b}
+    section{padding:80px 20px}
+    .container{max-width:1180px;margin:auto}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 45px}
+    .section-head span{color:var(--pink);font-weight:800}.section-head h2{font-size:40px;color:var(--purple);margin:6px 0 10px}
+    .section-head p{color:#68747a}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;padding:30px;border-radius:24px;box-shadow:0 10px 30px #0000000b;border:1px solid #eee}
+    .icon{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:31px;margin-bottom:18px}
+    .card h3{margin-bottom:8px;color:#303b40}.card p{color:#6b777c;font-size:15px}
+    .about{background:#fff}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about-box{background:linear-gradient(135deg,#f4eaff,#fff3f8);border-radius:30px;padding:40px}
+    .about-box .big{font-size:110px;text-align:center}
+    .ticks{list-style:none;margin-top:22px}.ticks li{margin:12px 0;font-weight:700}.ticks li::before{content:"✓";color:var(--green);font-weight:900;margin-right:10px}
+    .programs .card:nth-child(1) .icon{background:#fff0b8}.programs .card:nth-child(2) .icon{background:#d9f3ff}.programs .card:nth-child(3) .icon{background:#ffe0ed}
+    .why{background:#f7f0ff}
+    .cta{background:linear-gradient(135deg,var(--purple),#8b57e3);color:#fff;text-align:center}
+    .cta h2{font-size:42px;margin-bottom:12px}.cta p{margin-bottom:25px;opacity:.92}.cta .btn{background:var(--yellow);color:#3f3310}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    form{display:grid;gap:13px}.field{padding:14px 16px;border:1px solid #ddd;border-radius:12px;font:inherit;width:100%}
+    textarea.field{min-height:120px;resize:vertical}
+    .contact-info{background:#fff;border-radius:24px;padding:30px;box-shadow:0 10px 30px #0000000b}
+    .info-row{display:flex;gap:14px;margin:20px 0}.info-row b{display:block}.info-row span{color:#6b777c;font-size:14px}
+    footer{background:#25212d;color:#ddd;padding:30px 20px;text-align:center}
+    .footer-inner{max-width:1180px;margin:auto}
+    .small{font-size:13px;color:#a9a2b0;margin-top:7px}
+    .menu{display:none;background:none;border:0;font-size:28px;color:var(--purple)}
+    @media(max-width:800px){
+      .links{display:none}.menu{display:block}
+      .links.open{display:flex;position:absolute;top:75px;left:0;right:0;background:#fff;flex-direction:column;padding:20px;box-shadow:0 8px 20px #0001}
+      .hero-inner,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero-inner{padding-top:45px}.hero-art{min-height:350px}
+      .grid{grid-template-columns:1fr}.section-head h2{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">🌈 Admissions Open • Give your child a joyful start to learning in Lucknow</div>
+
+  <header>
+    <nav>
+      <a href="#home" class="logo"><span class="logo-mark">🎈</span> Kidzee <small>Play School</small></a>
+      <button class="menu" onclick="toggleMenu()">☰</button>
+      <div class="links" id="links">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#programs">Programs</a>
+        <a href="#why">Why Us</a><a href="#contact">Contact</a>
+        <a href="#contact" class="btn">Enquire Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">💜 Learn • Play • Grow</span>
+          <h1>A Happy Beginning for Every Little Mind.</h1>
+          <p>Welcome to Kidzee Play School, Lucknow — a warm and engaging place where children learn through play, creativity, exploration and meaningful experiences.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Book a School Visit</a>
+            <a class="btn secondary" href="#programs">Explore Programs</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="sun"></div><div class="bubble one"></div><div class="bubble two"></div>
+          <div class="kid-card">
+            <div class="kid-face">🧒🏻</div>
+            <h3>Big Dreams Start Small</h3>
+            <p>A caring environment designed for curiosity, confidence and joyful learning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-box"><div class="big">🎨 🧸 📚</div></div>
+        <div>
+          <div class="section-head" style="text-align:left;margin:0 0 15px">
+            <span>ABOUT OUR SCHOOL</span><h2>Where learning feels like fun.</h2>
+            <p>Our play-school experience is designed around the early years, with opportunities for children to discover, create, communicate and build social confidence.</p>
+          </div>
+          <ul class="ticks">
+            <li>Play-based and activity-oriented learning</li>
+            <li>Safe, caring and child-friendly environment</li>
+            <li>Creative activities and hands-on experiences</li>
+            <li>Focus on confidence, communication and social skills</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs" id="programs">
+      <div class="container">
+        <div class="section-head"><span>OUR PROGRAMS</span><h2>Learning for every little explorer</h2><p>Age-appropriate activities that encourage children to learn naturally and confidently.</p></div>
+        <div class="grid">
+          <div class="card"><div class="icon">🧸</div><h3>Playgroup</h3><p>A gentle first step into school life through stories, music, movement, play and social interaction.</p></div>
+          <div class="card"><div class="icon">🎨</div><h3>Nursery</h3><p>Creative and engaging activities that build language, early concepts, imagination and independence.</p></div>
+          <div class="card"><div class="icon">🚀</div><h3>Kindergarten</h3><p>Foundation learning with activities that develop school readiness, confidence and problem-solving.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="container">
+        <div class="section-head"><span>WHY CHOOSE US</span><h2>A place children love to come to</h2><p>We combine care, creativity and structured early learning to make the school experience meaningful.</p></div>
+        <div class="grid">
+          <div class="card"><div class="icon" style="background:#e0f8ed">🛡️</div><h3>Safe & Caring</h3><p>A welcoming environment where children can feel secure, supported and valued.</p></div>
+          <div class="card"><div class="icon" style="background:#e1f5ff">👩‍🏫</div><h3>Caring Educators</h3><p>Teachers who encourage curiosity, participation and positive learning habits.</p></div>
+          <div class="card"><div class="icon" style="background:#fff0b8">🌟</div><h3>Holistic Growth</h3><p>Activities supporting cognitive, social, emotional, physical and creative development.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to take the first step?</h2>
+        <p>Come visit Kidzee Play School, Lucknow and discover a joyful learning environment for your child.</p>
+        <a class="btn" href="#contact">Talk to Us</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head"><span>CONTACT US</span><h2>Let's connect</h2><p>Replace the placeholder contact details below with your school's official information.</p></div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-row">📍<div><b>Location</b><span>Lucknow, Uttar Pradesh, India</span></div></div>
+            <div class="info-row">📞<div><b>Phone</b><span>+91 XXXXX XXXXX</span></div></div>
+            <div class="info-row">✉️<div><b>Email</b><span>info@kidzeelucknow.com</span></div></div>
+            <div class="info-row">🕘<div><b>School Hours</b><span>Monday – Saturday | 9:00 AM – 2:00 PM</span></div></div>
+          </div>
+          <form onsubmit="submitForm(event)">
+            <input class="field" id="name" placeholder="Parent's Name" required>
+            <input class="field" id="phone" placeholder="Phone Number" required>
+            <input class="field" id="email" type="email" placeholder="Email Address">
+            <textarea class="field" id="message" placeholder="Tell us how we can help..."></textarea>
+            <button class="btn" type="submit">Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>🎈 Kidzee Play School, Lucknow</strong>
+      <div class="small">A joyful beginning for curious minds • © 2026 All Rights Reserved</div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){ document.getElementById('links').classList.toggle('open'); }
+    function submitForm(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value;
+      alert("Thank you, " + name + "! Your enquiry form is ready. Connect this form to your WhatsApp/email before publishing.");
+    }
+  </script>
+</body>
+</html>
